@@ -5,9 +5,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import pickle as pk
 
-def createModel(iris):
-    x = iris.data
-    y = iris.target
+def createModel(palmerPenguins):
+    x = palmerPenguins.drop(['species'], axis=1)
+    y = palmerPenguins['species']
 
     # split the data
     xTrain, xTest, yTrain, yTest = train_test_split(x, y, 
@@ -30,9 +30,9 @@ def main():
 
     palmerPenguins = pd.read_csv("../data/penguins_cleaned.csv")
 
-    print(palmerPenguins.describe())
+    # print(palmerPenguins.describe())
 
-    # model = createModel(iris)
+    model = createModel(palmerPenguins)
 
     # with open('../model/model.pkl', 'wb') as f:
     #     pk.dump(model, f)
