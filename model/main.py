@@ -43,8 +43,6 @@ def createModel(palmerPenguins):
 
     return model
 
-
-
 def main():
 
     # Dataset Link
