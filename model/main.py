@@ -28,6 +28,9 @@ def createModel(palmerPenguins):
 
 def main():
 
+    # Dataset Link
+    # https://github.com/dataprofessor/code/blob/master/streamlit/part3/penguins_cleaned.csv
+
     palmerPenguins = pd.read_csv("../data/penguins_cleaned.csv")
 
     # print(palmerPenguins.describe())
