@@ -24,7 +24,7 @@ def createModel(palmerPenguins):
     
     df['species'] = df['species'].apply(target_encode)
     print(df.head())
-    
+
     x = df.drop(['species'], axis=1)
     y = df['species']
 
@@ -56,8 +56,8 @@ def main():
 
     model = createModel(palmerPenguins)
 
-    # with open('../model/model.pkl', 'wb') as f:
-    #     pk.dump(model, f)
+    with open('../model/model.pkl', 'wb') as f:
+        pk.dump(model, f)
         
 if __name__ == '__main__':
     main()
